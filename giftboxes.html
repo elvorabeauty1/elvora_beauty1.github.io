@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Boxes - Elvora</title>
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<style>
+body { font-family:'Arial',sans-serif; background:#fff; margin:0; padding:0; }
+header { 
+    background: url('https://via.placeholder.com/1200x200') no-repeat center/cover; 
+    padding:60px 20px; text-align:center;
+}
+header h1 { color:#1a4a4a; font-size:50px; letter-spacing:4px; }
+header .tagline { color:#fff; font-size:20px; margin-top:10px; }
+
+.navbar { display:flex; justify-content:center; gap:40px; margin:30px 0; }
+.navbar a { text-decoration:none; color:#1a4a4a; font-weight:bold; font-size:18px; }
+.navbar a:hover { color:#d47a00; }
+
+.products { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; padding:30px; }
+.card { background:#f0f0f0; width:280px; border-radius:15px; padding:20px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
+.card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
+.card img { width:100%; border-radius:10px; }
+.card h3 { margin:10px 0; color:#1a4a4a; }
+.price { color:#d47a00; font-size:18px; margin:10px 0; }
+button { background:#d47a00; color:#fff; border:none; padding:12px 25px; border-radius:25px; cursor:pointer; font-size:14px; }
+button:hover { background:#e6a133; }
+
+footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:50px; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Gift Boxes & Sets</h1>
+    <div class="tagline">Perfect Gifts for Every Occasion</div>
+</header>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="perfumes.html">Perfumes</a>
+</div>
+
+<div class="products">
+    <div class="card">
+        <img src="https://via.placeholder.com/280" alt="Gift Box 1">
+        <h3>Luxury Box</h3>
+        <div class="price">1200 EGP</div>
+        <button>Order Now</button>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/280" alt="Gift Box 2">
+        <h3>Romantic Set</h3>
+        <div class="price">950 EGP</div>
+        <button>Order Now</button>
+    </div>
+</div>
+
+<footer>© 2026 Elvora Perfumes — All Rights Reserved</footer>
+
+<script>
+const buttons = document.querySelectorAll('button');
+buttons.forEach(btn => btn.addEventListener('click', ()=>{ 
+    alert('شكراً لطلبك! سيتم التواصل معك على الواتساب 😊'); 
+}));
+</script>
+
+</body>
+</html>
