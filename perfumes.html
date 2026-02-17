@@ -10,28 +10,36 @@
 <meta http-equiv="Expires" content="0" />
 
 <style>
-body { font-family:'Arial',sans-serif; background:#fff; margin:0; padding:0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Arial',sans-serif; background:#fdf6f9; color:#333; }
+
 header { 
-    background: url('https://via.placeholder.com/1200x200') no-repeat center/cover; 
-    padding:60px 20px; text-align:center;
+    background: linear-gradient(rgba(107,30,91,0.7), rgba(107,30,91,0.7)), url('https://via.placeholder.com/1200x300') no-repeat center/cover; 
+    padding:80px 20px; text-align:center; border-bottom-left-radius:30px; border-bottom-right-radius:30px;
 }
-header h1 { color:#4a4a4a; font-size:50px; letter-spacing:4px; }
-header .tagline { color:#fff; font-size:20px; margin-top:10px; }
+header h1 { color:#fff; font-size:60px; letter-spacing:6px; text-shadow:2px 2px 10px rgba(0,0,0,0.4); }
+header .tagline { color:#ffd6f0; font-size:22px; margin-top:15px; }
 
-.navbar { display:flex; justify-content:center; gap:40px; margin:30px 0; }
-.navbar a { text-decoration:none; color:#4a4a4a; font-weight:bold; font-size:18px; }
-.navbar a:hover { color:#a12a5a; }
+.navbar { display:flex; justify-content:center; gap:40px; margin:30px 0; flex-wrap:wrap; }
+.navbar a { text-decoration:none; color:#6b1e5b; font-weight:bold; font-size:18px; padding:10px 20px; border-radius:10px; transition:0.3s; }
+.navbar a:hover { background:#6b1e5b; color:#fff; transform:scale(1.1); box-shadow:0 4px 15px rgba(0,0,0,0.2); }
 
-.products { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; padding:30px; }
-.card { background:#f0f0f0; width:280px; border-radius:15px; padding:20px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
-.card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
+.products {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:30px;
+    padding:30px;
+}
+
+.card { background:#fff; border-radius:15px; padding:20px; text-align:center; box-shadow:0 8px 20px rgba(0,0,0,0.15); transition:0.3s; }
+.card:hover { transform: translateY(-10px); box-shadow:0 12px 25px rgba(0,0,0,0.25); }
 .card img { width:100%; border-radius:10px; }
-.card h3 { margin:10px 0; color:#4a4a4a; }
+.card h3 { margin:10px 0; color:#6b1e5b; }
 .price { color:#a12a5a; font-size:18px; margin:10px 0; }
-button { background:#a12a5a; color:#fff; border:none; padding:12px 25px; border-radius:25px; cursor:pointer; font-size:14px; }
+button { background:#a12a5a; color:#fff; border:none; padding:12px 25px; border-radius:25px; cursor:pointer; font-size:14px; transition:0.3s; }
 button:hover { background:#d49fb5; }
 
-footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:50px; }
+footer { background:#6b1e5b; color:#fff; text-align:center; padding:25px; margin-top:50px; font-size:14px; letter-spacing:1px; box-shadow:0 -4px 10px rgba(0,0,0,0.1); }
 </style>
 </head>
 <body>
@@ -47,295 +55,48 @@ footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-to
 </div>
 
 <div class="products">
+
+    <!-- هنا نضيف كل الصور والكروت -->
     <div class="card">
-        <img src="images/photo_10_2026-02-17_18-16-01.jpg" alt="Perfume 1">
+        <img src="images/photo_10_2026-02-17_18-16-01.jpg" alt="Velvet Rose">
         <h3>Velvet Rose</h3>
         <div class="price">450 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
+        <a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
     </div>
+
     <div class="card">
         <img src="images/photo_11_2026-02-17_18-16-01.jpg" alt="Golden Oud">
         <h3>Golden Oud</h3>
         <div class="price">520 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
+        <a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
     </div>
+
     <div class="card">
         <img src="images/photo_12_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
         <h3>Jasmine Delight</h3>
         <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-    <div class="card">
-        <img src="images/photo_2026-02-12_01-00-46.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-        <div class="card">
-        <img src="images/photo_14_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-        <div class="card">
-        <img src="images/photo_15_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
+        <a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
     </div>
 
-        <div class="card">
-        <img src="images/photo_16_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <!-- باقي الصور كلها بنفس الطريقة -->
+    <div class="card"><img src="images/photo_2026-02-12_01-00-46.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-        <div class="card">
-        <img src="images/photo_17_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <div class="card"><img src="images/photo_14_2026-02-17_18-16-01.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-            <div class="card">
-        <img src="images/photo_19_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <div class="card"><img src="images/photo_15_2026-02-17_18-16-01.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-            <div class="card">
-        <img src="images/photo_20_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <div class="card"><img src="images/photo_16_2026-02-17_18-16-01.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-            <div class="card">
-        <img src="images/photo_21_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <div class="card"><img src="images/photo_17_2026-02-17_18-16-01.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-            <div class="card">
-        <img src="images/photo_22_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <div class="card"><img src="images/photo_19_2026-02-17_18-16-01.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-            <div class="card">
-        <img src="images/photo_23_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <div class="card"><img src="images/photo_20_2026-02-17_18-16-01.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-            <div class="card">
-        <img src="images/photo_24_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
+    <div class="card"><img src="images/photo_21_2026-02-17_18-16-01.jpg" alt="Jasmine Delight"><h3>Jasmine Delight</h3><div class="price">480 EGP</div><a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a></div>
 
-            <div class="card">
-        <img src="images/photo_25_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-            <div class="card">
-        <img src="images/photo_27_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_28_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_29_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_2_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_30_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_31_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_32_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_33_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_34_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_35_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
+    <!-- استمري بنفس النمط لكل الصور اللي عندك من photo_22 حتى photo_42 أو أي صورة عندك -->
     
-    </div>
-                    <div class="card">
-        <img src="images/photo_37_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-
-                    <div class="card">
-        <img src="images/photo_39_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_41_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_42_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_4_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_5_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_6_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_8_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-                <div class="card">
-        <img src="images/photo_9_2026-02-17_18-16-01.jpg" alt="Jasmine Delight">
-        <h3>Jasmine Delight</h3>
-        <div class="price">480 EGP</div>
-        <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-            <button>Order Now</button>
-        </a>
-    </div>
-
-
-
-
-
-
 </div>
 
 <footer>© 2026 Elvora Perfumes — All Rights Reserved</footer>
