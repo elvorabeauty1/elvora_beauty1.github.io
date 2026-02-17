@@ -5,134 +5,197 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gift Boxes - Elvora</title>
 
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-
 <style>
-body { font-family:'Arial',sans-serif; background:#fff; margin:0; padding:0; }
-header { 
-    background: url('https://via.placeholder.com/1200x200') no-repeat center/cover; 
-    padding:60px 20px; text-align:center;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{font-family:Arial,sans-serif;background:#fffaf6;}
+
+header{
+background:linear-gradient(rgba(26,74,74,0.7),rgba(26,74,74,0.7)),
+url('https://via.placeholder.com/1200x250') no-repeat center/cover;
+padding:70px 20px;
+text-align:center;
 }
-header h1 { color:#1a4a4a; font-size:50px; letter-spacing:4px; }
-header .tagline { color:#fff; font-size:20px; margin-top:10px; }
+header h1{color:#fff;font-size:55px;letter-spacing:4px;}
+header .tagline{color:#ffe6c7;font-size:20px;margin-top:10px;}
 
-.navbar { display:flex; justify-content:center; gap:40px; margin:30px 0; }
-.navbar a { text-decoration:none; color:#1a4a4a; font-weight:bold; font-size:18px; }
-.navbar a:hover { color:#d47a00; }
+.navbar{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:30px 0;
+flex-wrap:wrap;
+}
+.navbar a{
+text-decoration:none;
+color:#1a4a4a;
+font-weight:bold;
+font-size:18px;
+}
+.navbar a:hover{color:#d47a00;}
 
-.products-section { padding:20px 0; }
-.products-section h2 { text-align:center; color:#1a4a4a; margin-bottom:20px; font-size:28px; }
+.products-section{padding:40px 20px;}
+.products-section h2{
+text-align:center;
+color:#1a4a4a;
+margin-bottom:30px;
+font-size:28px;
+}
 
-.products { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; padding:0 30px 30px 30px; }
-.card { background:#f0f0f0; width:280px; border-radius:15px; padding:20px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
-.card:hover { transform:scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
-.card img { width:100%; border-radius:10px; }
-.card h3 { margin:10px 0; color:#1a4a4a; }
-.price { color:#d47a00; font-size:18px; margin:10px 0; }
-button { background:#d47a00; color:#fff; border:none; padding:12px 25px; border-radius:25px; cursor:pointer; font-size:14px; }
-button:hover { background:#e6a133; }
+.products{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+justify-items:center;
+}
 
-footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:50px; }
+.card{
+width:260px;
+height:420px;
+background:#fff;
+border-radius:15px;
+padding:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+.card:hover{transform:translateY(-8px);}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:8px;
+}
+
+.card h3{margin:10px 0;color:#1a4a4a;}
+.price{color:#d47a00;font-size:18px;}
+
+button{
+background:#d47a00;
+color:#fff;
+border:none;
+padding:10px 20px;
+border-radius:25px;
+cursor:pointer;
+}
+button:hover{background:#e6a133;}
+
+footer{
+background:#1a4a4a;
+color:#fff;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+/* Responsive */
+@media(max-width:1024px){
+.products{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:768px){
+.products{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+.products{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Gift Boxes & Sets</h1>
-    <div class="tagline">Perfect Gifts for Every Occasion</div>
+<h1>Gift Boxes & Sets</h1>
+<div class="tagline">Perfect Gifts for Every Occasion</div>
 </header>
 
 <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="perfumes.html">Perfumes</a>
+<a href="index.html">Home</a>
+<a href="perfumes.html">Perfumes</a>
 </div>
 
-<!-- قسم Kyali Boxes -->
+<!-- Kyali Section -->
 <div class="products-section">
-    <h2>Kyali Perfume & Body Splash Gift Box </h2>
-    <div class="products">
-        <div class="card">
-            <img src="giftboxes/photo_6_2026-02-17_19-53-39.jpg" alt=" Kyali Box 1">
-            <h3>Kiari Box 1</h3>
-            <div class="price">850 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
-                <div class="card">
-            <img src="giftboxes/photo_5_2026-02-17_19-53-39.jpg" alt=" Kyali Box 2">
-            <h3>Kiari Box 1</h3>
-            <div class="price">850 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
-                <div class="card">
-            <img src="giftboxes/photo_4_2026-02-17_19-53-39.jpg" alt=" Kyali Box 3">
-            <h3>Kiari Box 1</h3>
-            <div class="price">850 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
-                <div class="card">
-            <img src="giftboxes/photo_3_2026-02-17_19-53-39.jpg" alt=" Kyali Box 4">
-            <h3>Kiari Box 1</h3>
-            <div class="price">850 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
-                <div class="card">
-            <img src="giftboxes/photo_2_2026-02-17_19-53-39.jpg" alt=" Kyali Box 5">
-            <h3>Kiari Box 1</h3>
-            <div class="price">850 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
-        <div class="card">
-            <img src="giftboxes/photo_1_2026-02-17_19-53-39.jpg" alt=" Kyali Box 6">
-            <h3>Kiari Box 2</h3>
-            <div class="price">900 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
-    </div>
+<h2>Kyali Perfume & Body Splash Gift Box</h2>
+<div class="products">
+
+<div class="card">
+<img src="giftboxes/photo_6_2026-02-17_19-53-39.jpg">
+<h3>Kyali Box 1</h3>
+<div class="price">850 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
 </div>
 
-<!-- قسم Eclair Collection -->
+<div class="card">
+<img src="giftboxes/photo_5_2026-02-17_19-53-39.jpg">
+<h3>Kyali Box 2</h3>
+<div class="price">850 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
+</div>
+
+<div class="card">
+<img src="giftboxes/photo_4_2026-02-17_19-53-39.jpg">
+<h3>Kyali Box 3</h3>
+<div class="price">850 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
+</div>
+
+<div class="card">
+<img src="giftboxes/photo_3_2026-02-17_19-53-39.jpg">
+<h3>Kyali Box 4</h3>
+<div class="price">850 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
+</div>
+
+<div class="card">
+<img src="giftboxes/photo_2_2026-02-17_19-53-39.jpg">
+<h3>Kyali Box 5</h3>
+<div class="price">850 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
+</div>
+
+<div class="card">
+<img src="giftboxes/photo_1_2026-02-17_19-53-39.jpg">
+<h3>Kyali Box 6</h3>
+<div class="price">900 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
+</div>
+
+</div>
+</div>
+
+<!-- Eclair Section -->
 <div class="products-section">
-    <h2>Eclair Collection </h2>
-    <div class="products">
-        <div class="card">
-            <img src="giftboxes/photo_2026-01-23_19-14-29.jpg" >
-            <img src="giftboxes/photo_2026-01-23_19-14-34.jpg" >
-            <h3>Luxury Set 1</h3>
-            <div class="price">1200 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
+<h2>Eclair Collection</h2>
+<div class="products">
 
+<div class="card">
+<img src="giftboxes/photo_2026-01-23_19-14-29.jpg">
+<img src="giftboxes/photo_2026-01-23_19-14-34.jpg">
+<h3>Luxury Set 1</h3>
+<div class="price">1200 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
+</div>
 
-<!-- قسم yara Collection -->
+</div>
+</div>
+
+<!-- Yara Section -->
 <div class="products-section">
-    <h2>yara Collection </h2>
-    <div class="products">
-        <div class="card">
-            <img src="giftboxes/photo_8_2026-02-17_19-53-39.jpg" >
-            <h3>Luxury Set 1</h3>
-            <div class="price">1200 EGP</div>
-            <a href="https://www.instagram.com/elvora_beauty1" target="_blank">
-                <button>Order Now</button>
-            </a>
-        </div>
+<h2>Yara Collection</h2>
+<div class="products">
 
-    </div>
+<div class="card">
+<img src="giftboxes/photo_8_2026-02-17_19-53-39.jpg">
+<h3>Luxury Set 2</h3>
+<div class="price">1200 EGP</div>
+<a href="https://www.instagram.com/elvora_beauty1" target="_blank"><button>Order Now</button></a>
+</div>
+
+</div>
 </div>
 
 <footer>© 2026 Elvora Perfumes — All Rights Reserved</footer>
